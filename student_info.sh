@@ -2,10 +2,13 @@
 
 # Info about my computer science students from students database
 
+# Enter the title
 echo -e "\n~~ My Computer Science Students ~~\n"
 
+# Enter in the students.sql terminal
 PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"
 
+#Enter in the student_info.sh file editor
 echo -e "\nFirst name, last name, and GPA of students with a 4.0 GPA:"
 echo "$($PSQL "SELECT first_name, last_name, gpa FROM students WHERE gpa = 4.0")"
 
